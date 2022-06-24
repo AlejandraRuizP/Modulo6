@@ -1,0 +1,14 @@
+#card{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 10%;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.88);
+}
+img{
+    width: 200px;
+}
+

@@ -1,6 +1,9 @@
 var http = require('http');
 var url= require('url');
 
+function cuadrado(numero){
+  return numero * numero;
+}
 http.createServer(function (request, response) {
 
   response.writeHead(200, {'Content-Type': 'text/plain'});
@@ -11,12 +14,13 @@ http.createServer(function (request, response) {
     let parametros= q.query;
     if(parametros.numero == 2){
         response.write('Resultado: '+ (2 * 2));
+        //response.write('Resultado: '+ cuadrado(parametros.numero));
     }else{
         response.write('\nNOT FOUND');
     }
     response.write('\nruta ok: '+ ruta);
   }
-  response.end('\nHello World');
+  response.end();
 }).listen(8081);
 
 console.log('Server running at http://127.0.0.1:8081/');
