@@ -9,7 +9,7 @@ http.createServer(function (request, response) {
     let ruta= q.pathname;
         if(ruta== '/datos'){
         response.writeHead(200, {'Content-Type': 'text/html'});
-        response.end(exito);
+        response.write(exito);
     }else{
         response.writeHead(401, {'Content-Type': 'text/html'});
         response.end(fail);
